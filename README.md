@@ -11,11 +11,12 @@ Roll : 36 <br>
 
 <h3> Description:</h3> <p> Boyer-Moore is an algorithm for finding substrings into strings. This algorithm compares each characters of substring to find a word or the same characters into the string. When characters do not match, the search jumps to the next matching position in the pattern by the value indicated in the Bad Match Table. </p> 
 
-<h3>Implementation</h3>
+<h3>Implementation:</h3>
 <p>
   The Algorithm is implemented using the "Bad Character Rule". The idea of bad character heuristic is simple. The character of the text which doesn’t match with the current character of the pattern is called the Bad Character. Upon mismatch, we shift the pattern until – <br>
 1. The mismatch becomes a match.: We Search for the missmatched character in the pattern and then shift it such that it matches the charcter in the text.<br>
-2. Pattern P moves past the mismatched character : We first find the position of last occurrence of mismatching character in pattern and if character does not exist we will shift pattern past the mismatching character. 
+2. Pattern P moves past the mismatched character : We first find the position of last occurrence of mismatching character in pattern and if character does not exist we will shift pattern past the mismatching character. <br>
+The Time Complexity of Boyer Moore Algorithm is O(n x m) (where n=Length of Input String and m=length of the Pattern) 
 </p>
 
 <h3>
@@ -34,22 +35,21 @@ Roll : 36 <br>
 <br>
 <p> INPUT1 </p>
 
-![Screenshot (65)](https://user-images.githubusercontent.com/95165463/189667623-2322a9b0-d341-4051-a555-59f4f4c1f218.png)
-
+String message - AAGTABFKNILKSHDFAYEBDH <br>
+Pattern - KNILKS
 <p> OUTPUT1 </p>
-<p>It is a Rising Tower Matrix</p>
+<p>KNILKS Pattern occur at Index Value = 7</p>
 <p>INPUT2</p>
 
-![Screenshot (66)](https://user-images.githubusercontent.com/95165463/189668083-4dc1d5d0-ed74-4a4e-9acc-3b217952e8e9.png)
-
+String(text)-This is Design And Anaysis of Algorithm Assignment 2 (/*Applied in text search*/)<br>
+Pattern - Assignment 2
 <p>OUTPUT2</p>
-<p>It is not a Rising Tower Matrix</p>
+<p>Assignment 2 Pattern occur at Index Value = 40</p>
 
-<p> INPUT3(Random Inputs) </p>
-
-
-![Screenshot (68)](https://user-images.githubusercontent.com/95165463/189668623-956c18fa-3056-4502-8b58-401e3dab5401.png)
+<p> INPUT3 </p>
+String - Boyer-Moore algorithm is a string searching or matching algorithm developed by Robert S. Boyer<br>
+Pattern - Complexity
 
 <p> OUTPUT3 </p>
-<p>It is a not Rising Tower Matrix</p>
+<p>Pattern not Found</p>
 
